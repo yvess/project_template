@@ -12,7 +12,7 @@ setup
 
 project boostrap::
 
-    django-admin.py startproject -e py,.anaconda --template=--template=https://github.com/yvess/project-template/archive/master.zip <project_name>
+    django-admin.py startproject -e py,json --template=https://github.com/yvess/project_template/archive/master.zip <project_name>
 
 
 cleanup::
@@ -21,8 +21,8 @@ cleanup::
     mv project/gitignore project/.gitignore
     mv project.sublime-project <project_name>.sublime-project
     mv anaconda.json .anaconda
+    on server ln -fs /etc/uwsgi/apps-available/<project>.ini uwsgi.ini
     rm INSTALL.rst
-    ln -fs /etc/uwsgi/apps-available/<project>.ini uwsgi.ini
 
 virtualenv and db::
 
