@@ -12,7 +12,7 @@ setup
 
 project boostrap::
 
-    django-admin.py startproject -e py,.anaconda --template=~/code/django/project_template <project_name>
+    django-admin.py startproject -e py,.anaconda --template=--template=https://github.com/yvess/project-template/archive/master.zip <project_name>
 
 
 cleanup::
